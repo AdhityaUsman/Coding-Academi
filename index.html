@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coding Academy - Galeri & Pendaftaran Pelatihan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header & Navigasi -->
+  <header class="main-header">
+    <div class="container header-container">
+      <div class="logo">
+        <span class="logo-icon">&#60;/&#62;</span>
+        <div class="logo-text">
+          <h1>Coding Academy</h1>
+          <p>Lembaga Pelatihan Pemrograman Komputer</p>
+        </div>
+      </div>
+
+      <!-- Navigasi 2 Tampilan Utama -->
+      <nav class="navigation">
+        <button type="button" class="nav-btn active" id="btn-nav-galeri" onclick="pindahHalaman('galeri')">
+          🖼️ Galeri Kegiatan
+        </button>
+        <button type="button" class="nav-btn" id="btn-nav-daftar" onclick="pindahHalaman('pendaftaran')">
+          📝 Form Pendaftaran
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Banner Sambutan -->
+  <section class="banner">
+    <div class="container">
+      <h2>Selamat Datang di Portal Pelatihan Coding Academy</h2>
+      <p>Tingkatkan keahlian coding Anda bersama mentor berpengalaman dengan kurikulum praktis dan berbasis proyek nyata.</p>
+    </div>
+  </section>
+
+  <!-- Konten Utama -->
+  <main class="container main-content">
+
+    <!-- ==================== TAMPILAN 1: GALERI KEGIATAN ==================== -->
+    <section id="halaman-galeri" class="halaman-section active">
+      <div class="section-title">
+        <h2>Galeri Kegiatan Pelatihan</h2>
+        <div class="title-underline"></div>
+        <p>Dokumentasi aktivitas pembelajaran, praktikum lab, dan bimbingan peserta kursus coding.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Kegiatan 1 -->
+        <div class="gallery-card">
+          <div class="card-img-box">
+            <img src="images/bootcamp_session.jpg" alt="Kelas Pelatihan Pemrograman Web">
+          </div>
+          <div class="card-desc-box">
+            <span class="badge badge-blue">Kelas Bootcamp</span>
+            <h3>Pelatihan Pemrograman Web Dasar & Lanjutan</h3>
+            <p>
+              Suasana kelas intensif di mana peserta mempelajari sintaks dasar HTML, styling CSS, dan logika interaktif JavaScript hingga pembuatan website dinamis.
+            </p>
+            <div class="card-info">
+              <span>📅 Jadwal: Senin - Rabu</span>
+              <span>👥 Kapasitas: 25 Peserta</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kegiatan 2 -->
+        <div class="gallery-card">
+          <div class="card-img-box">
+            <img src="images/mentor_review.jpg" alt="Sesi Bimbingan Bersama Mentor">
+          </div>
+          <div class="card-desc-box">
+            <span class="badge badge-green">Mentoring & Diskusi</span>
+            <h3>Bimbingan Coding Tatap Muka (1-on-1)</h3>
+            <p>
+              Sesi konsultasi personal bersama mentor pengajar untuk membahas pemecahan algoritma, perbaikan error (debugging), dan peninjauan kode program peserta.
+            </p>
+            <div class="card-info">
+              <span>📅 Jadwal: Setiap Kamis</span>
+              <span>👥 Bimbingan Personal</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kegiatan 3 -->
+        <div class="gallery-card">
+          <div class="card-img-box">
+            <img src="images/hackathon_demo.jpg" alt="Presentasi Proyek Akhir Peserta">
+          </div>
+          <div class="card-desc-box">
+            <span class="badge badge-orange">Demo Day</span>
+            <h3>Presentasi Karya Akhir & Uji Kompetensi</h3>
+            <p>
+              Kegiatan unjuk karya di mana setiap peserta mempresentasikan aplikasi yang berhasil mereka bangun di hadapan instruktur dan rekan satu kelas.
+            </p>
+            <div class="card-info">
+              <span>📅 Jadwal: Akhir Semester</span>
+              <span>👥 Ujian Praktik</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kegiatan 4 -->
+        <div class="gallery-card">
+          <div class="card-img-box">
+            <img src="images/mobile_ai_lab.jpg" alt="Praktikum di Laboratorium Komputer">
+          </div>
+          <div class="card-desc-box">
+            <span class="badge badge-purple">Praktikum Lab</span>
+            <h3>Praktikum Mobile App & Algoritma Lab</h3>
+            <p>
+              Kegiatan praktik langsung di laboratorium komputer menggunakan perangkat pendukung untuk menguji aplikasi pada emulator dan handphone fisik secara real-time.
+            </p>
+            <div class="card-info">
+              <span>📅 Jadwal: Setiap Jumat</span>
+              <span>👥 Praktikum Terbimbing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tombol Aksi Menuju Pendaftaran -->
+      <div class="cta-center">
+        <p>Tertarik bergabung dalam program pelatihan kami?</p>
+        <button type="button" class="btn btn-primary" onclick="pindahHalaman('pendaftaran')">
+          Buka Form Pendaftaran Sekarang &raquo;
+        </button>
+      </div>
+    </section>
+
+    <!-- ==================== TAMPILAN 2: FORM PENDAFTARAN ==================== -->
+    <section id="halaman-pendaftaran" class="halaman-section">
+      <div class="section-title">
+        <h2>Formulir Pendaftaran Siswa Baru</h2>
+        <div class="title-underline"></div>
+        <p>Silakan isi data diri Anda di bawah ini secara lengkap dan benar.</p>
+      </div>
+
+      <div class="form-card">
+        <form id="formPendaftaran" onsubmit="prosesPendaftaran(event)">
+
+          <!-- 1. NIK -->
+          <div class="form-group">
+            <label for="nik">Nomor Induk Kependudukan (NIK) <span class="text-danger">*</span></label>
+            <input 
+              type="text" 
+              id="nik" 
+              name="nik" 
+              class="form-control" 
+              placeholder="Masukkan 16 digit NIK (Contoh: 3201234567890001)" 
+              maxlength="16" 
+              required
+            >
+            <small class="form-text">NIK harus berupa 16 digit angka sesuai KTP / KK.</small>
+          </div>
+
+          <!-- 2. Nama Lengkap -->
+          <div class="form-group">
+            <label for="namaLengkap">Nama Lengkap <span class="text-danger">*</span></label>
+            <input 
+              type="text" 
+              id="namaLengkap" 
+              name="namaLengkap" 
+              class="form-control" 
+              placeholder="Masukkan nama lengkap Anda" 
+              required
+            >
+          </div>
+
+          <!-- 3. Pilihan Jenis Kelamin -->
+          <div class="form-group">
+            <label>Pilihan Jenis Kelamin <span class="text-danger">*</span></label>
+            <div class="radio-inline-group">
+              <label class="radio-item">
+                <input type="radio" name="jenisKelamin" value="Laki-laki" required>
+                <span>Laki-laki</span>
+              </label>
+              <label class="radio-item">
+                <input type="radio" name="jenisKelamin" value="Perempuan">
+                <span>Perempuan</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- 4. Nomor HP -->
+          <div class="form-group">
+            <label for="noHp">Nomor Handphone / WhatsApp <span class="text-danger">*</span></label>
+            <input 
+              type="tel" 
+              id="noHp" 
+              name="noHp" 
+              class="form-control" 
+              placeholder="Contoh: 081234567890" 
+              required
+            >
+            <small class="form-text">Pastikan nomor aktif dan terhubung ke WhatsApp.</small>
+          </div>
+
+          <!-- 5. Alamat -->
+          <div class="form-group">
+            <label for="alamat">Alamat Lengkap <span class="text-danger">*</span></label>
+            <textarea 
+              id="alamat" 
+              name="alamat" 
+              rows="3" 
+              class="form-control" 
+              placeholder="Tuliskan alamat lengkap tempat tinggal Anda..." 
+              required
+            ></textarea>
+          </div>
+
+          <!-- 6. Pilihan Bahasa Pemrograman yang Diminati -->
+          <div class="form-group">
+            <label>Pilihan Bahasa Pemrograman yang Diminati <span class="text-danger">*</span></label>
+            <small class="form-text mb-2">Pilih satu atau lebih bahasa yang ingin dipelajari:</small>
+            
+            <div class="checkbox-grid">
+              <label class="checkbox-item">
+                <input type="checkbox" name="bahasa" value="JavaScript">
+                <span>JavaScript</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="bahasa" value="Python">
+                <span>Python</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="bahasa" value="Java">
+                <span>Java</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="bahasa" value="C++">
+                <span>C++</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="bahasa" value="PHP">
+                <span>PHP</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="bahasa" value="Golang">
+                <span>Golang</span>
+              </label>
+            </div>
+            <div id="error-bahasa" class="text-danger" style="display: none; font-size: 13px; margin-top: 6px;">
+              * Harap pilih minimal satu bahasa pemrograman.
+            </div>
+          </div>
+
+          <!-- Tombol Aksi Form -->
+          <div class="form-actions">
+            <button type="reset" class="btn btn-secondary">Reset Form</button>
+            <button type="submit" class="btn btn-primary" id="btnSimpan">Simpan Data Pendaftaran</button>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- ==================== TAMPILAN HASIL ISIAN FORM ==================== -->
+      <div id="areaHasilPendaftaran" class="result-box" style="display: none;">
+        <div class="result-header">
+          <h3>✅ Hasil Pendaftaran Siswa Baru</h3>
+          <p>Data pendaftaran Anda telah berhasil disimpan ke sistem.</p>
+        </div>
+
+        <table class="table-hasil">
+          <tbody>
+            <tr>
+              <th width="35%">Nomor Induk Kependudukan (NIK)</th>
+              <td width="5%">:</td>
+              <td id="hasilNik" class="fw-bold">-</td>
+            </tr>
+            <tr>
+              <th>Nama Lengkap</th>
+              <td>:</td>
+              <td id="hasilNama" class="fw-bold">-</td>
+            </tr>
+            <tr>
+              <th>Pilihan Jenis Kelamin</th>
+              <td>:</td>
+              <td id="hasilGender">-</td>
+            </tr>
+            <tr>
+              <th>Nomor HP / WhatsApp</th>
+              <td>:</td>
+              <td id="hasilHp">-</td>
+            </tr>
+            <tr>
+              <th>Alamat Lengkap</th>
+              <td>:</td>
+              <td id="hasilAlamat">-</td>
+            </tr>
+            <tr>
+              <th>Bahasa Pemrograman yang Diminati</th>
+              <td>:</td>
+              <td id="hasilBahasa" class="text-primary fw-bold">-</td>
+            </tr>
+            <tr>
+              <th>Waktu Simpan</th>
+              <td>:</td>
+              <td id="hasilWaktu">-</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="result-actions">
+          <button type="button" class="btn btn-secondary" onclick="window.print()">Cetak Bukti Pendaftaran</button>
+          <button type="button" class="btn btn-primary" onclick="daftarBaru()">Daftar Lagi</button>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Coding Academy - Pemrograman Web. Dibuat untuk Keperluan Tugas.</p>
+    </div>
+  </footer>
+
+  <!-- ==================== MODAL KONFIRMASI CUSTOM ==================== -->
+  <div id="modalKonfirmasi" class="modal-overlay" style="display: none;">
+    <div class="modal-box">
+      <div class="modal-icon">❓</div>
+      <h3 class="modal-title">Konfirmasi Penyimpanan</h3>
+      <p class="modal-text">apakah anda sudah yakin?</p>
+      <p class="modal-subtext">Pastikan seluruh data yang Anda masukkan ke dalam form sudah sesuai dan benar.</p>
+      <div class="modal-buttons">
+        <button type="button" class="btn btn-secondary" onclick="tutupModalKonfirmasi()">Batal</button>
+        <button type="button" class="btn btn-primary" onclick="konfirmasiYa()">Ya</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
